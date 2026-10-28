@@ -90,7 +90,44 @@ git push
 
 ## Project layout
 
-The existing Flutter project layout is unchanged. Application screens and supporting Dart files are under `lib/`; Flutter platform folders are at the project root.
+```text
+babumobiles/
+├── android/                 # Android app and platform configuration
+├── ios/                     # iOS app and platform configuration
+├── lib/
+│   ├── data/
+│   │   └── inventory_data.dart
+│   ├── screens/
+│   │   ├── add_new_stock_screen.dart
+│   │   ├── available_stock_screen.dart
+│   │   ├── dashboard_screen.dart
+│   │   ├── inventory_screen.dart
+│   │   ├── login_screen.dart
+│   │   ├── low_stock_screen.dart
+│   │   ├── product_list_screen.dart
+│   │   ├── stock_quantity_screen.dart
+│   │   └── total_products_screens.dart
+│   ├── datbase_service.dart
+│   ├── main.dart
+│   ├── new_repair_screen.dart
+│   ├── product_form_screen.dart
+│   ├── repairs_screen.dart
+│   ├── reports_screen.dart
+│   └── sales_screen.dart
+├── linux/                   # Linux desktop configuration
+├── macos/                   # macOS desktop configuration
+├── test/
+│   └── widget_test.dart
+├── web/                     # Web app configuration
+├── windows/                 # Windows desktop configuration
+├── .gitignore
+├── analysis_options.yaml
+├── pubspec.lock
+├── pubspec.yaml
+└── README.md
+```
+
+`lib/` contains the Flutter app entry point, screens, inventory data, and database service. The platform folders hold the generated platform-specific runners and configuration.
 
 ## Notes
 
